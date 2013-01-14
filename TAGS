@@ -1,0 +1,594 @@
+
+GRtool.cpp,228
+void grDrawSolidCylinder(6,165
+void grDrawRJoint(28,1016
+void grDrawBase(60,2329
+void grDrawPJoint(75,2914
+void grDrawEndEffector(133,5178
+void grDrawGround(192,7846
+void grBeginShadow(208,8574
+void grEndShadow(230,9621
+
+Image_Processing.cpp,883
+using std::vector;7,111
+Image_Processing::Image_Processing(17,330
+Image_Processing::~Image_Processing(44,1045
+void Image_Processing::openCAM(46,1088
+void Image_Processing::openVideoFile(84,2174
+void Image_Processing::openImageFile(111,2841
+int Image_Processing::initAttributes(127,3205
+int Image_Processing::captureFrame(189,5033
+void Image_Processing::doCalibration(262,6832
+int Image_Processing::find_blob(282,7443
+void Image_Processing::doAutoCalibration(406,11704
+void Image_Processing::doUndistort(415,11853
+int Image_Processing::calimain(424,12031
+bool Image_Processing::XML_To_Mat(585,17848
+int Image_Processing::Mat_To_XML(607,18390
+void Image_Processing::pEstimate(659,20131
+void Image_Processing::findROI(898,28601
+void Image_Processing::SaveContours(925,29453
+void Image_Processing::AddPoints(1000,32040
+void Image_Processing::MatchContours(1007,32170
+
+main.cpp,16
+int main(9,188
+
+mainwindow.cpp,254
+MainWindow::MainWindow(7,106
+MainWindow::~MainWindow(31,1228
+void MainWindow::loadImage(36,1279
+void MainWindow::loadVideo(47,1705
+void MainWindow::loadCamera(58,2120
+void MainWindow::aboutDlg(63,2180
+void MainWindow::updatePrincipalPoint(77,2621
+
+math3d.cpp,1769
+void m3dLoadIdentity33(14,322
+void m3dLoadIdentity33(25,597
+void m3dLoadIdentity44(36,862
+void m3dLoadIdentity44(48,1189
+float m3dGetDistanceSquared(62,1601
+double m3dGetDistanceSquared(77,1855
+#define A(91,2077
+#define B(92,2114
+#define P(93,2151
+void m3dMatrixMultiply44(97,2308
+void m3dMatrixMultiply(109,2822
+#undef A119,3300
+#undef B120,3310
+#undef P121,3320
+#define A33(124,3334
+#define B33(125,3372
+#define P33(126,3410
+void m3dMatrixMultiply33(130,3568
+void m3dMatrixMultiply44(141,3982
+#undef A33151,4365
+#undef B33152,4377
+#undef P33153,4389
+#define M33(155,4403
+void m3dRotationMatrix33(159,4583
+#undef M33207,5442
+void m3dRotationMatrix44(211,5598
+    #define M(232,6007
+    #undef M265,6589
+void m3dRotationMatrix33(272,6727
+    #define M(293,7120
+    #undef M318,7580
+void m3dRotationMatrix44(324,7744
+    #define M(345,8137
+    #undef M378,8712
+bool m3dInvertMatrix44(387,8934
+    #define SWAP_ROWS(389,9008
+    #define MAT(390,9077
+	#undef MAT499,13052
+	#undef SWAP_ROWS500,13065
+bool m3dInvertMatrix44(505,13125
+    #define SWAP_ROWS(507,13195
+    #define MAT(508,13265
+	#undef MAT617,17221
+	#undef SWAP_ROWS618,17234
+void m3dProjectXY(627,17410
+void m3dProjectXYZ(654,18349
+void m3dFindNormal(689,19680
+void m3dFindNormal(712,20304
+void m3dGetPlaneEquation(738,21241
+void m3dGetPlaneEquation(762,21942
+void m3dCatmullRom3(790,22981
+void m3dCatmullRom3(820,24402
+double m3dRaySphereTest(852,25857
+float m3dRaySphereTest(879,26835
+void m3dCalculateTangentBasis(906,27837
+double m3dSmoothStep(939,29024
+float m3dSmoothStep(954,29421
+void m3dMakePlanarShadowMatrix(973,29916
+void m3dMakePlanarShadowMatrix(1014,30988
+double m3dClosestPointOnRay(1059,32316
+float m3dClosestPointOnRay(1076,32910
+
+openglscene.cpp,464
+OpenGLScene::OpenGLScene(9,152
+OpenGLScene::~OpenGLScene(28,563
+void OpenGLScene::initializeGL(33,611
+void OpenGLScene::resizeGL(72,1713
+void OpenGLScene::paintGL(115,2731
+void OpenGLScene::flushView(145,3552
+void OpenGLScene::drawSphere(154,3798
+void OpenGLScene::mousePressEvent(164,4054
+void OpenGLScene::mouseMoveEvent(169,4141
+void OpenGLScene::wheelEvent(188,4720
+void OpenGLScene::drawManipulator(194,4876
+void OpenGLScene::drawGripper(239,6386
+
+P3P.cpp,287
+P3P::P3P(8,81
+P3P::~P3P(43,1015
+void P3P::runEstimator(48,1048
+void P3P::printResults(53,1103
+void P3P::setImagePoints(58,1158
+void P3P::setImagePointsArma(77,1708
+field< vec > P3P::getPoseArma(92,2096
+vector< Point3f > P3P::getPose(97,2170
+QMatrix4x4 P3P::getRegister(111,2494
+
+PoseEstimator.cpp,350
+PoseEstimator::PoseEstimator(3,28
+PoseEstimator::~PoseEstimator(21,548
+void PoseEstimator::runEstimator(22,584
+void PoseEstimator::initAttributes(24,625
+vec PoseEstimator::f(71,1834
+mat PoseEstimator::calcJac(94,2364
+void PoseEstimator::setImgPts(122,2881
+ field< vec > PoseEstimator::getPose(128,2986
+ vec PoseEstimator::getParams(133,3058
+
+PoseLM.cpp,114
+PoseLM::PoseLM(3,21
+PoseLM::~PoseLM(30,572
+void PoseLM::runEstimator(32,595
+void PoseLM::printResults(83,2167
+
+pPOSIT.cpp,336
+using std::cout;4,41
+using std::endl;5,58
+using std::srand;9,113
+using std::time;12,149
+pPOSIT::pPOSIT(22,302
+pPOSIT::~pPOSIT(29,542
+void pPOSIT::runEstimator(34,566
+CvVect32f pPOSIT::getTvec(49,1155
+CvMatr32f pPOSIT::getRmat(54,1225
+std::vector<CvPoint2D32f> pPOSIT::setImagePoints(59,1292
+void pPOSIT::printResults(92,2111
+
+qtopencv.cpp,577
+qtopencv::qtopencv(14,396
+qtopencv::~qtopencv(62,2150
+void qtopencv::ocv2qt(81,2700
+void qtopencv::captureStarted(117,3636
+void qtopencv::captureStopped(124,3735
+void qtopencv::doCalib(129,3791
+void qtopencv::doAutoCalib(134,3846
+void qtopencv::doUndistort(139,3909
+void qtopencv::activateAutoCalib(144,3983
+void qtopencv::activateExtract(149,4053
+void qtopencv::activateNormal(154,4119
+void qtopencv::activatePose(162,4305
+void qtopencv::openCam(167,4365
+void qtopencv::openImage(174,4470
+void qtopencv::openVideo(181,4601
+void qtopencv::setThreshold(188,4732
+
+Reg3D.cpp,300
+#undef AUTOMATIC_VALUES3,20
+Reg3D::Reg3D(5,45
+Reg3D::~Reg3D(30,560
+void Reg3D::doRegistration(32,581
+void Reg3D::calcParameters(162,3566
+mat Reg3D::getRotation(206,4826
+vec Reg3D::getTranslation(211,4878
+mat44 Reg3D::getTransformation(216,4933
+vector< double > Reg3D::getParameters(221,4996
+
+FindROI.h,111
+#define PROCESS_H2,18
+using std::cout;5,57
+using std::cin;6,74
+using std::max;9,112
+using std::min;10,128
+
+GRtool.h,305
+#define _GRTOOL_H__2,21
+const int MAX_LINK 11,196
+struct DH_parameter12,222
+  char  type;DH_parameter::type14,246
+  float alpha;DH_parameter::alpha15,287
+  float a;DH_parameter::a16,316
+  float d;DH_parameter::d17,343
+  float theta;DH_parameter::theta18,368
+  float m[DH_parameter::m19,396
+
+Image_Processing.h,5997
+#define IMAGE_PROCESSING_H_2,28
+using std::cout;22,444
+using std::cerr;23,461
+using std::endl;24,478
+using std::vector;27,514
+using std::fabs;30,551
+using std::time;33,586
+using std::max;36,625
+#undef estP3P41,668
+#define estPOSIT42,682
+const unsigned int NORMAL_OPERATION 47,744
+const unsigned int YANG 48,787
+const unsigned int TONY 49,830
+const unsigned int JON 50,873
+class Image_Processing53,918
+    int Calib_Threshold;Image_Processing::Calib_Threshold56,951
+    inline Point2f getPrincipalPoint(Image_Processing::getPrincipalPoint65,1245
+    inline Mat getFrame(Image_Processing::getFrame69,1327
+    inline Size2i getSize(Image_Processing::getSize73,1385
+    inline int getType(Image_Processing::getType77,1449
+    inline double getFPS(Image_Processing::getFPS81,1513
+    inline void toggleDrawCalib(Image_Processing::toggleDrawCalib85,1575
+    inline void toggleDrawFeatures(Image_Processing::toggleDrawFeatures89,1652
+    inline void toggleDrawPose(Image_Processing::toggleDrawPose93,1731
+    inline QMatrix4x4 getTransMat(Image_Processing::getTransMat97,1802
+    inline bool isAutoCalibOn(Image_Processing::isAutoCalibOn101,1878
+    inline bool isPoseEstimationOn(Image_Processing::isPoseEstimationOn105,1956
+    inline bool isFeatureExtractionOn(Image_Processing::isFeatureExtractionOn109,2034
+    bool autocalib_mode;Image_Processing::autocalib_mode118,2214
+    bool pose_mode;Image_Processing::pose_mode119,2239
+    bool extract_mode;Image_Processing::extract_mode120,2259
+    double fl;Image_Processing::fl129,2464
+    int CUBE_SIZE;Image_Processing::CUBE_SIZE130,2479
+    vector<CvPoint3D32f> modelPoints;Image_Processing::modelPoints132,2499
+    vector<CvPoint2D32f> srcImagePoints;Image_Processing::srcImagePoints133,2537
+    vector< Point3f > ObjectPoints;Image_Processing::ObjectPoints134,2578
+    vector< Point2i > ImagePoints;Image_Processing::ImagePoints135,2614
+    vector< double > initialGuess;Image_Processing::initialGuess136,2649
+    pPOSIT* p;Image_Processing::p137,2684
+    P3P* q;Image_Processing::q138,2699
+    QMatrix4x4 transMat;Image_Processing::transMat139,2711
+    QHash<Image_Processing::QHash142,2772
+    QHash<int, vector< Point > > hashL;Image_Processing::hashL142,2772
+    QHash<Image_Processing::QHash143,2812
+    QHash<int, vector< Point > > hashR;Image_Processing::hashR143,2812
+    int point_Left_x,Image_Processing::point_Left_x144,2852
+    int point_Left_x, point_Left_y,Image_Processing::point_Left_y144,2852
+    int point_Left_x, point_Left_y, offset_Left_x,Image_Processing::offset_Left_x144,2852
+    int point_Left_x, point_Left_y, offset_Left_x, offset_Left_y;Image_Processing::offset_Left_y144,2852
+    int point_Right_x,Image_Processing::point_Right_x145,2918
+    int point_Right_x, point_Right_y,Image_Processing::point_Right_y145,2918
+    int point_Right_x, point_Right_y, offset_Right_x,Image_Processing::offset_Right_x145,2918
+    int point_Right_x, point_Right_y, offset_Right_x, offset_Right_y;Image_Processing::offset_Right_y145,2918
+    Mat uframe_roiL,Image_Processing::uframe_roiL146,2988
+    Mat uframe_roiL, uframe_roiR;Image_Processing::uframe_roiR146,2988
+    Rect roiL,Image_Processing::roiL147,3022
+    Rect roiL,roiR;Image_Processing::roiR147,3022
+    VideoCapture  capture;Image_Processing::capture149,3043
+    double	  brightness,Image_Processing::brightness150,3070
+    double	  brightness, hue,Image_Processing::hue150,3070
+    double	  brightness, hue, contrast,Image_Processing::contrast150,3070
+    double	  brightness, hue, contrast, saturation;Image_Processing::saturation150,3070
+    Size2i        frame_size;Image_Processing::frame_size151,3122
+    bool          cali_in_progress;Image_Processing::cali_in_progress152,3152
+    bool          undistort_flag;Image_Processing::undistort_flag153,3188
+    double        fps;Image_Processing::fps154,3222
+    bool          cam_flag;Image_Processing::cam_flag155,3245
+    bool          img_flag;Image_Processing::img_flag156,3273
+    bool          vdo_flag;Image_Processing::vdo_flag157,3301
+    QString       current_vdo_file;Image_Processing::current_vdo_file158,3329
+    QString       current_img_file;Image_Processing::current_img_file159,3365
+    bool      draw_autocalib;Image_Processing::draw_autocalib161,3402
+    bool      draw_features;Image_Processing::draw_features162,3432
+    bool      draw_pose;Image_Processing::draw_pose163,3461
+    Mat       dframe;Image_Processing::dframe165,3487
+    Mat       tframe;Image_Processing::tframe166,3509
+    Mat       cframe;Image_Processing::cframe167,3531
+    Mat       gframe;Image_Processing::gframe168,3553
+    Mat       caldframe;Image_Processing::caldframe169,3575
+    Mat       uframe;Image_Processing::uframe170,3628
+    Point2f  centerpoint;Image_Processing::centerpoint172,3674
+    vector< Mat > channels;Image_Processing::channels175,3744
+    Mat intrinsic_matrix;Image_Processing::intrinsic_matrix176,3772
+    Mat distortion_coeffs;Image_Processing::distortion_coeffs177,3798
+    double fx,Image_Processing::fx178,3825
+    double fx, fy,Image_Processing::fy178,3825
+    double fx, fy, cx,Image_Processing::cx178,3825
+    double fx, fy, cx, cy,Image_Processing::cy178,3825
+    double fx, fy, cx, cy, k1,Image_Processing::k1178,3825
+    double fx, fy, cx, cy, k1, k2,Image_Processing::k2178,3825
+    double fx, fy, cx, cy, k1, k2, k3,Image_Processing::k3178,3825
+    double fx, fy, cx, cy, k1, k2, k3, p1,Image_Processing::p1178,3825
+    double fx, fy, cx, cy, k1, k2, k3, p1, p2;Image_Processing::p2178,3825
+    double rx,Image_Processing::rx179,3872
+    double rx, ry,Image_Processing::ry179,3872
+    double rx, ry, rz,Image_Processing::rz179,3872
+    double rx, ry, rz, tx,Image_Processing::tx179,3872
+    double rx, ry, rz, tx, ty,Image_Processing::ty179,3872
+    double rx, ry, rz, tx, ty, tz;Image_Processing::tz179,3872
+
+mainwindow.h,204
+#define MAINWINDOW_H2,22
+namespace Ui 9,140
+class MainWindow 16,223
+    Ui::MainWindow *ui;MainWindow::ui32,513
+    qtopencv *ocv;MainWindow::ocv33,538
+    OpenGLScene *ogl;MainWindow::ogl34,558
+
+math3d.h,5011
+#define _MATH3D_LIBRARY__7,312
+typedef float	M3DVector3f[M3DVector3f20,952
+typedef double	M3DVector3d[M3DVector3d21,1020
+typedef float M3DVector4f[M3DVector4f23,1092
+typedef double M3DVector4d[M3DVector4d24,1167
+typedef float M3DVector2f[M3DVector2f26,1222
+typedef double M3DVector2d[M3DVector2d27,1296
+typedef float M3DMatrix33f[M3DMatrix33f35,1473
+typedef double M3DMatrix33d[M3DMatrix33d36,1562
+typedef float M3DMatrix44f[M3DMatrix44f44,1768
+typedef double M3DMatrix44d[M3DMatrix44d45,1858
+#define M3D_PI 50,2055
+#define M3D_2PI 51,2096
+#define M3D_PI_DIV_180 52,2128
+#define M3D_INV_PI_DIV_180 53,2175
+#define m3dDegToRad(59,2407
+#define m3dRadToDeg(60,2452
+#define m3dHrToDeg(63,2519
+#define m3dHrToRad(64,2563
+#define m3dDegToHr(66,2615
+#define m3dRadToHr(67,2652
+inline unsigned int m3dIsPOW2(74,2879
+#define	m3dGetVectorX(87,3225
+#define m3dGetVectorY(88,3258
+#define m3dGetVectorZ(89,3291
+#define m3dGetVectorW(90,3324
+#define m3dSetVectorX(92,3359
+#define m3dSetVectorY(93,3403
+#define m3dSetVectorZ(94,3447
+#define m3dSetVectorW(95,3491
+inline void m3dLoadVector2(100,3681
+inline void m3dLoadVector2(102,3771
+inline void m3dLoadVector3(104,3861
+inline void m3dLoadVector3(106,3968
+inline void m3dLoadVector4(108,4077
+inline void m3dLoadVector4(110,4202
+inline void	m3dCopyVector2(116,4452
+inline void	m3dCopyVector2(117,4563
+inline void	m3dCopyVector3(119,4676
+inline void	m3dCopyVector3(120,4787
+inline void	m3dCopyVector4(122,4900
+inline void	m3dCopyVector4(123,5011
+inline void m3dAddVectors2(128,5244
+inline void m3dAddVectors2(130,5376
+inline void m3dAddVectors3(133,5510
+inline void m3dAddVectors3(135,5661
+inline void m3dAddVectors4(138,5814
+inline void m3dAddVectors4(140,5985
+inline void m3dSubtractVectors2(145,6281
+inline void m3dSubtractVectors2(147,6418
+inline void m3dSubtractVectors3(150,6556
+inline void m3dSubtractVectors3(152,6712
+inline void m3dSubtractVectors4(155,6870
+inline void m3dSubtractVectors4(157,7046
+inline void m3dScaleVector2(164,7346
+inline void m3dScaleVector2(166,7440
+inline void m3dScaleVector3(169,7537
+inline void m3dScaleVector3(171,7646
+inline void m3dScaleVector4(174,7758
+inline void m3dScaleVector4(176,7882
+inline void m3dCrossProduct(186,8356
+inline void m3dCrossProduct(193,8569
+inline float m3dDotProduct(203,8939
+inline double m3dDotProduct(206,9059
+inline float m3dGetAngleBetweenVectors(211,9352
+inline double m3dGetAngleBetweenVectors(217,9530
+inline float m3dGetVectorLengthSquared(226,9855
+inline double m3dGetVectorLengthSquared(229,9978
+inline float m3dGetVectorLength(235,10253
+inline double m3dGetVectorLength(238,10373
+inline void m3dNormalizeVector(244,10668
+inline void m3dNormalizeVector(247,10773
+inline double m3dGetDistance(258,11275
+inline float m3dGetDistance(261,11396
+inline float m3dGetMagnitudeSquared(264,11523
+inline double m3dGetMagnitudeSquared(265,11627
+inline float m3dGetMagnitude(267,11734
+inline double m3dGetMagnitude(268,11836
+inline void m3dCopyMatrix33(284,12581
+inline void m3dCopyMatrix33(287,12700
+inline void m3dCopyMatrix44(290,12819
+inline void m3dCopyMatrix44(293,12938
+inline void m3dGetMatrixColumn33(305,13369
+inline void m3dGetMatrixColumn33(308,13516
+inline void m3dSetMatrixColumn33(311,13664
+inline void m3dSetMatrixColumn33(314,13811
+inline void m3dGetMatrixColumn44(317,13959
+inline void m3dGetMatrixColumn44(320,14106
+inline void m3dSetMatrixColumn44(323,14254
+inline void m3dSetMatrixColumn44(326,14401
+inline void m3dSetMatrixRowCol33(338,14892
+inline float m3dGetMatrixRowCol33(341,15009
+inline void m3dSetMatrixRowCol33(344,15119
+inline double m3dGetMatrixRowCol33(347,15237
+inline void m3dSetMatrixRowCol44(350,15348
+inline float m3dGetMatrixRowCol44(353,15465
+inline void m3dSetMatrixRowCol44(356,15575
+inline double m3dGetMatrixRowCol44(359,15693
+inline void m3dExtractRotation(366,15992
+inline void m3dExtractRotation(374,16279
+inline void m3dInjectRotation(382,16587
+inline void m3dInjectRotation(390,16831
+__inline void m3dTransformVector3(412,17847
+__inline void m3dTransformVector3(421,18292
+__inline void m3dTransformVector4(429,18704
+__inline void m3dTransformVector4(438,19138
+__inline void m3dRotateVector(450,19636
+__inline void m3dRotateVector(458,19942
+inline void m3dScaleMatrix33(470,20435
+inline void m3dScaleMatrix33(473,20543
+inline void m3dScaleMatrix44(476,20652
+inline void m3dScaleMatrix44(479,20761
+inline void m3dTranslationMatrix44(491,21351
+inline void m3dTranslationMatrix44(494,21492
+inline void m3dTranslateMatrix44(499,21688
+inline void m3dTranslateMatrix44(502,21808
+inline void m3dScaleMatrix44(507,21979
+inline void m3dScaleMatrix44(510,22093
+#define TRANSPOSE44(515,22264
+inline void m3dTransposeMatrix44(525,22663
+inline void m3dTransposeMatrix44(527,22767
+inline float m3dGetDistanceToPlane(547,23671
+inline double m3dGetDistanceToPlane(550,23852
+inline bool m3dCloseEnough(578,25689
+inline bool m3dCloseEnough(583,25841
+
+openglscene.h,789
+#define OPENGLSCENE_H2,22
+namespace Ui 8,108
+struct TransfMat 12,149
+    GLfloat x;TransfMat::x14,199
+    GLfloat y;TransfMat::y15,249
+    GLfloat z;TransfMat::z16,264
+    GLfloat rotx;TransfMat::rotx17,279
+    GLfloat roty;TransfMat::roty18,332
+    GLfloat rotz;TransfMat::rotz19,350
+class OpenGLScene 22,372
+    Ui::OpenGLScene *ui;OpenGLScene::ui39,644
+    QTimer *timer;OpenGLScene::timer40,669
+    GLfloat rotationX;OpenGLScene::rotationX42,689
+    GLfloat rotationY;OpenGLScene::rotationY43,712
+    GLfloat rotationZ;OpenGLScene::rotationZ44,735
+    GLfloat view_distance;OpenGLScene::view_distance45,758
+    int AUTO_CAL_X;OpenGLScene::AUTO_CAL_X47,786
+    int AUTO_CAL_Y;OpenGLScene::AUTO_CAL_Y48,806
+    QPoint lastPos;OpenGLScene::lastPos50,827
+
+P3P.h,679
+using arma::field;2,21
+using arma::vec;3,40
+using arma::mat44;4,57
+using std::vector;7,95
+using cv::Point2i;11,165
+using cv::Point3f;12,184
+class P3P 17,237
+    inline field< vec > getImagePointsArma(P3P::getImagePointsArma27,427
+    inline vector< Point2i > getImagePoints(P3P::getImagePoints31,511
+    inline vector< Point3f > getObjPoints(P3P::getObjPoints38,688
+    inline void setObjPoints(P3P::setObjPoints42,776
+    PoseLM *plm;P3P::plm54,1098
+    field< vec > ImgPts;P3P::ImgPts57,1139
+    field< vec> objPts;P3P::objPts58,1164
+    vector< Point3f > ObjectPoints;P3P::ObjectPoints61,1220
+    vector< Point2i > ImagePoints;P3P::ImagePoints62,1256
+
+PoseEstimator.h,846
+#define POSEESTIMATOR_H2,24
+using std::vector;5,67
+using arma::field;8,108
+using arma::vec;9,127
+using arma::mat;10,144
+using arma::norm;11,161
+using arma::zeros;12,179
+class PoseEstimator23,530
+        field< vec > iPts;PoseEstimator::iPts42,1000
+        const field< vec > oPts;PoseEstimator::oPts43,1027
+        const vec px2si;PoseEstimator::px2si44,1060
+        const double fl;PoseEstimator::fl45,1085
+        const vec p0;PoseEstimator::p046,1110
+        field< vec > estPts;PoseEstimator::estPts48,1133
+        field< vec > q;PoseEstimator::q49,1162
+        field< vec > Q;PoseEstimator::Q50,1186
+        vector< double > x;PoseEstimator::x52,1211
+        mat J;PoseEstimator::J54,1240
+        vec e;PoseEstimator::e55,1255
+        vec p;PoseEstimator::p56,1270
+        vec p_n;PoseEstimator::p_n57,1285
+
+PoseLM.h,624
+#define POSELM_H2,17
+using arma::trans;7,84
+using arma::max;8,103
+using arma::wall_clock;9,120
+using arma::inv;10,144
+using arma::dot;11,161
+using arma::eye;12,178
+using std::cout;15,216
+using std::endl;16,233
+using std::cerr;17,250
+#define ITER_MAX 19,268
+class PoseLM 32,880
+        const vec eps;PoseLM::eps48,1259
+        int k;PoseLM::k49,1282
+        double myu;PoseLM::myu51,1298
+        double nu;PoseLM::nu52,1318
+        double rho;PoseLM::rho53,1337
+        bool stop;PoseLM::stop54,1357
+        mat H;PoseLM::H56,1377
+        vec g;PoseLM::g57,1392
+        vec dp;PoseLM::dp58,1407
+
+pPOSIT.h,379
+#undef DEBUG8,110
+class pPOSIT10,124
+	CvPOSITObject* positObject;pPOSIT::positObject13,148
+	std::vector<CvPoint2D32f> srcImagePoints;pPOSIT::srcImagePoints14,177
+	double fl;pPOSIT::fl15,220
+	CvTermCriteria criteria;pPOSIT::criteria16,232
+	CvMatr32f rotation_matrix;pPOSIT::rotation_matrix17,258
+        CvVect32f translation_vector;pPOSIT::translation_vector18,286
+
+qtopencv.h,1121
+#define QTOPENCV_H2,19
+class qtopencv 10,146
+    inline QImage* getImage(qtopencv::getImage20,285
+    inline void setWidth(qtopencv::setWidth29,469
+    inline void setHeight(qtopencv::setHeight34,551
+    inline void toggleDrawCalib(qtopencv::toggleDrawCalib39,635
+    inline void toggleDrawFeatures(qtopencv::toggleDrawFeatures43,716
+    inline void toggleDrawPose(qtopencv::toggleDrawPose47,803
+    Ui::qtopencvClass 	 ui;qtopencv::ui57,980
+    Image_Processing	*ip;qtopencv::ip58,1008
+    QTimer 		        *timer;qtopencv::timer59,1034
+    QPixmap             *pixmap;qtopencv::pixmap60,1063
+    Mat                  ocv_image;qtopencv::ocv_image61,1096
+    QImage	             qimage;qtopencv::qimage62,1132
+    bool		         normal_mode;qtopencv::normal_mode63,1164
+    bool                 autocalib_mode;qtopencv::autocalib_mode64,1196
+    bool                 pose_mode;qtopencv::pose_mode65,1237
+    bool                 extract_mode;qtopencv::extract_mode66,1273
+    int                  width;qtopencv::width67,1312
+    int                  height;qtopencv::height68,1344
+
+Reg3D.h,1004
+#define REG3D_H2,16
+using std::vector;7,74
+using std::cout;10,114
+using std::cerr;11,131
+using std::endl;12,148
+using std::fabs;15,183
+using arma::mat;20,242
+using arma::mat44;21,259
+using arma::vec;22,278
+using arma::field;23,295
+using arma::randn;24,314
+using arma::wall_clock;25,333
+using arma::zeros;26,357
+using arma::raw_ascii;27,376
+using arma::colvec;28,399
+using arma::rowvec;29,419
+class Reg3D31,440
+        const field< vec > PointsA;Reg3D::PointsA46,697
+        const field< vec > PointsB;Reg3D::PointsB47,733
+        mat rotMatrix;Reg3D::rotMatrix49,770
+        vec traVector;Reg3D::traVector50,793
+        mat44 homTransform;Reg3D::homTransform51,816
+        double alpha;Reg3D::alpha53,845
+        double beta;Reg3D::beta54,867
+        double gamma;Reg3D::gamma55,888
+        double tx;Reg3D::tx56,910
+        double ty;Reg3D::ty57,929
+        double tz;Reg3D::tz58,948
+        size_t nPts;Reg3D::nPts60,968
+        field< mat > N;Reg3D::N62,990
